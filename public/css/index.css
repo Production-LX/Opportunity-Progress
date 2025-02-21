@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
+body,
+html {
+    background-color: rgb(14, 14, 14);
+    color: white;
+    font-family: "Arimo", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+#job-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.job {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    background: rgba(110, 110, 110, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(89, 89, 89, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(194, 194, 194, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.barContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.reserved, .prepared, .bookedOut, .partBooked, .bookedIn {
+    height: 100%;
+    transition: .4s ease;
+}
+
+.prepared {
+    --color-r: 34;
+    --color-g: 117;
+    --color-b: 52;
+    background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+    background: repeating-linear-gradient(-45deg, rgba(var(--color-r), var(--color-g), var(--color-b), 0.6), rgba(var(--color-r), var(--color-g), var(--color-b), 0.6) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 6px);
+    border: 1px solid rgb(var(--color-r), var(--color-g), var(--color-b));
+    border-top: none;
+    border-bottom: none;
+}
+.mixed {
+    --color-r: 150;
+    --color-g: 150;
+    --color-b: 150;
+    background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+    background: repeating-linear-gradient(-45deg, rgba(var(--color-r), var(--color-g), var(--color-b), 0.6), rgba(var(--color-r), var(--color-g), var(--color-b), 0.6) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 6px);
+    border: 1px solid rgb(var(--color-r), var(--color-g), var(--color-b));
+    border-top: none;
+    border-bottom: none;
+}
+.bookedOut {
+    --color-r: 117;
+    --color-g: 34;
+    --color-b: 34;
+    background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+    background: repeating-linear-gradient(-45deg, rgba(var(--color-r), var(--color-g), var(--color-b), 0.6), rgba(var(--color-r), var(--color-g), var(--color-b), 0.6) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 6px);
+    border: 1px solid rgb(var(--color-r), var(--color-g), var(--color-b));
+    border-top: none;
+    border-bottom: none;
+}
+.partBookedIn {
+    --color-r: 77;
+    --color-g: 34;
+    --color-b: 117;
+    background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+    background: repeating-linear-gradient(-45deg, rgba(var(--color-r), var(--color-g), var(--color-b), 0.6), rgba(var(--color-r), var(--color-g), var(--color-b), 0.6) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 6px);
+    border: 1px solid rgb(var(--color-r), var(--color-g), var(--color-b));
+    border-top: none;
+    border-bottom: none;
+}
+.bookedIn {
+    --color-r: 34;
+    --color-g: 85;
+    --color-b: 117;
+    background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+    background: repeating-linear-gradient(-45deg, rgba(var(--color-r), var(--color-g), var(--color-b), 0.6), rgba(var(--color-r), var(--color-g), var(--color-b), 0.6) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 3px, rgba(var(--color-r), var(--color-g), var(--color-b), 0.3) 6px);
+    border: 1px solid rgb(var(--color-r), var(--color-g), var(--color-b));
+    border-top: none;
+    border-bottom: none;
+}
+
+h1,
+p {
+    margin: 0px;
+    padding: 0px;
+    /*mix-blend-mode: difference;*/
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.45));
+}
+
+.job h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    z-index: 2;
+}
+
+.job p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(230, 230, 230);
+    z-index: 2;
+}
